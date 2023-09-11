@@ -5,18 +5,12 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container"><br>
     <h1 class="text-center">Inventario</h1><br>
     
     <div class="btn-group-inline" role="group">
 
-        <input type="text" id="filtro-input"  placeholder="Nombre a buscar">
-        <button id="filtrar-text" class="btn btn-success">Filtrar</button>
-        <button id="filtrar-text" class="btn btn-warning"><a href="/inventory" class="button--a">Cancelar filtro</a></button>
-        <br><br>
-        <form method="get" action="/pdf/Generar" class="form-inline">
-            <button type="submit" class="btn btn-primary">Generar pdf</button><br>
-        </form>
+        
     </div>
     
     <br>
@@ -25,7 +19,7 @@
             <table class="table table-light">
                 <thead class="thead-light">
                     <tr>
-                        <th>Id</th>
+                        <th class="bg-secondary">Id</th>
                         <th>nombre</th>
                         <th>Precio</th>
                         <th>Cantidad</th>
@@ -39,16 +33,16 @@
                         
                      %>
                         <tr>
-                            <td><%= element.id_product %></td>
-                            <td><%= element.name %></td>
-                            <td><%= element.price %></td>
-                            <td><%= element.number %></td>
-                            <td><%= element.description %></td>
-                            <td><%= element.brand %></td>
+                            <td class="bg-secondary "><%= element.id_product %></td>
+                            <td ><%= element.name %></td>
+                            <td ><%= element.price %></td>
+                            <td ><%= element.number %></td>
+                            <td ><%= element.description %></td>
+                            <td ><%= element.brand %></td>
                             <td>
                                 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
                                     <form method="get" class="form-inline" action="<%= element._id%>">
-                                        <button type="submit" class="btn btn-warning">Editar</button>
+                                        <button type="submit" class="btn btn-success">Editar</button>
                                     </form>
                                 </div>
                                 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
@@ -65,7 +59,7 @@
                                                     </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        ¿Estás seguro de que deseas borrar el registro <p name="_id" value="<%=element._id %>"><%=element._id %> ?</p>
+                                                        ¿Estás seguro de que deseas borrar el registro <p name="_id" value="<%=element._id %>"><%=element.id_product %> ?</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>

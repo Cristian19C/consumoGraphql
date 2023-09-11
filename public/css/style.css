@@ -1,7 +1,7 @@
 .formulario__agregar{
     border: 1px solid gray;
     width: 500px;
-    height: 800px;
+    height: 700px;
     border-radius: 5px;
     margin: 20px auto;
 }
@@ -24,8 +24,8 @@
     border: 0;
     background: none;
     display: block;
-    margin: 16px auto;
-    padding: 14px 10px;
+    margin: 12px auto;
+    padding: 10px 10px;
     text-align: center;
     border: 1px solid gray;
     width: 400px;

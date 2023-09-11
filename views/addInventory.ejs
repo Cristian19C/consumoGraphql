@@ -11,10 +11,10 @@
       }
     }); %>
 <div class="formulario__agregar">
-    <div class="formulario__title">Datos del material</div>
+    <div class="formulario__title bg-info">Datos del material</div>
     <form method="POST" action="/add">
         <label for="id_product">ID:</label> 
-        <input type="number" required readonly name="id_product" id="id_product" placeholder="ID" value="<%= lastId+1 %>">
+        <input type="number" required readonly  name="id_product" id="id_product" placeholder="ID" value="<%= lastId+1 %>">
         <label for="name">Nombre:</label> 
         <input type="text" required name="name"  id="name" placeholder="Nombre del material">
         <label for="price">Precio:</label> 
