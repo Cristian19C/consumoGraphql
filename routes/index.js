@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const {obtenerInventory, addInventory, deleteInventory, findById, updateInventory} = require('../resources/inventory')
 
-router.get('/inventory', async (req, res) => {
+router.get('/', async (req, res) => {
     const inventario = await obtenerInventory()
     // console.log(inventario);
     res.render ('inventory', {'title': 'Inventario', 'data':inventario})
@@ -31,7 +31,7 @@ router.post('/add', async(req,res)=>{
   const addInventario = await addInventory(data)
 
   
-  res.redirect('/inventory')
+  res.redirect('/')
 })
 
 router.get('/:id', async(req, res)=>{
@@ -52,7 +52,7 @@ router.get('/delete/:id', async(req, res) => {
           console.log(id_product);
           
         const inventario = await deleteInventory(id_product) 
-      res.redirect('/inventory')
+      res.redirect('/')
   
   });
 
@@ -76,7 +76,7 @@ router.get('/delete/:id', async(req, res) => {
   const updateInventario = await updateInventory(id, data)
 
   
-  res.redirect('/inventory')
+  res.redirect('/')
 })
   
 module.exports = router
